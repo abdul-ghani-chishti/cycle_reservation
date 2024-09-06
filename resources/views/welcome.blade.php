@@ -22,7 +22,7 @@
       <img src="{{ asset('img/logo.svg')}}" alt=""
         class="transform transition hover:scale-125 duration-300 ease-in-out" />
       <span class="font-bold tracking-wider text-xl">
-        &nbsp LAPORSA</span>
+        &nbsp Cycle Reservation</span>
     </div>
     <div class="block lg:hidden">
       <button
@@ -39,17 +39,17 @@
           Home
         </a>
         <a href="#how" class="block mt-4 lg:inline-block lg:mt-0 text-black mr-4">
-          Tata Cara
+          How
         </a>
       </div>
       <div>
         <button
           class="text-black font-normal rounded-md py-3 border-black px-4 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-          <a href="{{ url('login')}}">Masuk</a>
+          <a href="{{ url('login')}}">Login</a>
         </button>
         <button
           class="text-blue-500 font-medium rounded-md py-3 px-4 border-2 border-white focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-          <a href="{{ url('register')}}">Daftar</a>
+          <a href="{{ url('register')}}">Register</a>
         </button>
       </div>
     </div>
@@ -63,11 +63,10 @@
       <!--Left Col-->
       <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left text-gray-800">
         <h1 class="my-4 text-4xl font-bold leading-tight">
-          Layanan Pengaduan Masyarakat Online
+          Online Cycle Reservation Portal
         </h1>
         <p class="leading-normal text-1xl mb-8">
-          Sampaikan laporan masalah Anda di sini, kami akan memprosesnya
-          dengan cepat.
+          Reserve a cycle as per your need !
         </p>
         <button
           class="mx-auto lg:mx-0 bg-blue-500 text-white font-bold rounded-md my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
@@ -157,8 +156,8 @@
   </div>
   <!-- Footer -->
   <footer class="text-center font-medium bg-blue-200 py-5">
-    © {{ now()->year }} LAPORSA | By
-    <a href="/" class="text-blue-500" target="_blank">Tugas Akhir Prognet</a>
+    © {{ now()->year }} cycle_reservation_portal | By
+    <a href="/" class="text-blue-500" target="_blank">Ghani</a>
   </footer>
   @include('sweetalert::alert')
 </body>

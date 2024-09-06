@@ -1,3 +1,5 @@
+
+
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
@@ -59,6 +61,22 @@
                                 name="password_confirmation" required />
             </div>
 
+            {{--is cycle ?--}}
+            <div class="mt-4">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-5 align-self-end">
+                            <label for="" class="">Have Cycle</label>
+                            <input type="checkbox" id="is_cycle" name="is_cycle" class="switchery"
+                                   data-size="sm" data-switchery="true">
+{{--                            <label for="" class="">%</label>--}}
+                            <input id="is_cycle_val" value="0" name="is_cycle_val" hidden>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
                     {{ __('Already registered?') }}
@@ -67,9 +85,27 @@
                 <x-button class="ml-3 bg-blue-500 text-white font-bold rounded-md my-3 py-3 px-4 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:bg-blue-500 hover:scale-105 duration-300 ease-in-out">
                     {{ __('Register') }}
                 </x-button>
-                
-                
+
+
             </div>
         </form>
     </x-auth-card>
 </x-guest-layout>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    var toggleValue = false;
+    $('#is_cycle').change( function () {
+        console.log('clicked');
+        toggleValue = !toggleValue;
+        if(toggleValue)
+        {
+            $('#is_cycle_val').val("1");
+            console.log(toggleValue);
+        }
+        else
+        {
+            $('#is_cycle_val').val("0");
+            console.log(toggleValue);
+        }
+    });
+</script>
